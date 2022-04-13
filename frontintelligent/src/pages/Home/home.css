@@ -1,0 +1,38 @@
+.container-index {
+    display: flex;
+    justify-content: center;
+}
+
+.container-index .content {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    width: 400px;
+    height: 500px;
+    background-color: azure;
+    border-radius: 1.5rem;
+    text-align: center;
+}
+
+.content img {
+    margin: 1rem;
+    width: 90%;
+}
+
+.superios-content {
+    margin-bottom: 10rem;
+}
+
+
+.container {
+    width: 100%;
+    height: 850px;
+}
+
+#relatorios {
+    width: 100%;
+    height: 100%;
+}
+
+#buttons {
+    background-color: var(--primarycolor);
+}
