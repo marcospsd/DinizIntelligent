@@ -16,6 +16,9 @@ import Exageradocaxu2021 from "../pages/Home/Relatorios/ADM/Exageradocaxu2021"
 import ChamadosTI from "../pages/Home/Relatorios/TI/ChamadosTI";
 //ESTOQUE
 import LevantamentoEstoque from "../pages/Home/Relatorios/ESTOQUE/LevEstoque";
+//LOJAS
+import VendasPeriodoCaxu from "../pages/Home/Relatorios/LOJAS/vendasperiodocaxu";
+import MetasLais from "../pages/Home/Relatorios/RH/MetasLais";
 
 
 const AppRoutes = () => {
@@ -45,6 +48,8 @@ const AppRoutes = () => {
                     <Route exact path="/desempenhotelevendas" element={<Private><DesemprenhoTelevendas/></Private>} />
                     {/* DIRETORIA */}
                     <Route exact path="/dashvendasdir" element={<Private><DashVendas/></Private>} />
+                    {/* RECURSOS HUMANOS */}
+                    <Route exact path="/metasrh" element={<Private><MetasLais/></Private>} />
                     {/* ADMINISTRATIVO */}
                     <Route exact path="/exagerado2021" element={<Private><Exagerado2021/></Private>} />
                     <Route exact path="/exageradocaxu2021" element={<Private><Exageradocaxu2021/></Private>} />
@@ -52,6 +57,10 @@ const AppRoutes = () => {
                     <Route exact path="/chamadosti" element={<Private><ChamadosTI/></Private>} />
                     {/* ESTOQUE */}
                     <Route exact path="/levantamentoestoque" element={<Private><LevantamentoEstoque/></Private>} />
+                    {/* LOJAS */}
+                    <Route exact path="/vendasperiodocaxu" element={<Private><VendasPeriodoCaxu/></Private>} />
+
+                    
                 </Routes>
             </AuthProvicer>
         </BrowserRouter>

@@ -7,7 +7,6 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
@@ -23,16 +22,18 @@ const estoque = [
   { nome: 'Levantamento Estoque', rota: '/levantamentoestoque'},
 ]
 const rh = [
-
+  { nome: 'Metas Lojas', rota: '/metasrh'},
 ]
 const lojas = [
+  { nome: 'Vendas por Periodo - CAXU', rota: '/vendasperiodocaxu'},
 
 ]
 const financeiro = [
 
 ]
+
 const televendas = [
-  {nome: 'Desempenho Televendas', rota: '/desempenhotelevendas'}
+  {nome: 'Desempenho Televendas', rota: '/desempenhotelevendas'},
 
 ]
 const administrativo = [
@@ -49,7 +50,7 @@ const pages = [
   { page: 'DIRETORIA', setor: '1', dados :[ ...diretoria ] },
   { page: 'ESTOQUE', setor: '6', dados:[ ...estoque ]},
   { page: 'R.H.', setor: '2', dados: [...rh ]},
-  { page: 'LOJAS', setor: '1', dados: [...lojas ]},
+  { page: 'LOJAS', setor: '8', dados: [...lojas ]},
   { page: 'FINANCEIRO', setor: '4', dados: [...financeiro ]},
   { page: 'TELEVENDAS', setor: '3', dados: [...televendas ]},
   { page: 'ADMINISTRATIVO', setor: '1', dados: [...administrativo]},
@@ -79,13 +80,19 @@ const ResponsiveAppBar = () => {
       case '1':
         return pages
       case '2':
-        return pages.filter((page) => page.setor == acesso)
+        return pages.filter((page) => page.setor === acesso)
       case '3':
-        return pages.filter((page) => page.setor == acesso)
+        return pages.filter((page) => page.setor === acesso)
       case '4':
-        return pages.filter((page) => page.setor == acesso)
+        return pages.filter((page) => page.setor === acesso)
       case '6':
-        return pages.filter((page) => page.setor == acesso)
+        return pages.filter((page) => page.setor === acesso)
+      case '7':
+        return pages.filter((page) => page.setor === acesso)
+      case '8':
+        return pages.filter((page) => page.setor === acesso)
+      case '9':
+        return pages.filter((page) => page.setor === acesso)
     }
   }
   
