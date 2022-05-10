@@ -39,6 +39,7 @@ const televendas = [
 const administrativo = [
   { nome: 'Exagerado 2021', rota: '/exagerado2021'},
   { nome: 'Exagerado Caxu 2021', rota: '/exageradocaxu2021'},
+  { nome: 'Exagerado 2022', rota: '/exagerado2022'},
   
 ]
 

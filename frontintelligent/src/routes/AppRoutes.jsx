@@ -12,6 +12,7 @@ import DashVendas from "../pages/Home/Relatorios/DIRETORIA/DashboardVendas";
 // ADMINISTRATIVO
 import Exagerado2021 from "../pages/Home/Relatorios/ADM/Exagerado2021";
 import Exageradocaxu2021 from "../pages/Home/Relatorios/ADM/Exageradocaxu2021"
+import Exagerado2022 from "../pages/Home/Relatorios/ADM/Exagerado2022";
 // TI
 import ChamadosTI from "../pages/Home/Relatorios/TI/ChamadosTI";
 //ESTOQUE
@@ -53,6 +54,7 @@ const AppRoutes = () => {
                     {/* ADMINISTRATIVO */}
                     <Route exact path="/exagerado2021" element={<Private><Exagerado2021/></Private>} />
                     <Route exact path="/exageradocaxu2021" element={<Private><Exageradocaxu2021/></Private>} />
+                    <Route exact path="/exagerado2022" element={<Private><Exagerado2022/></Private>} />
                     {/* T.I. */}
                     <Route exact path="/chamadosti" element={<Private><ChamadosTI/></Private>} />
                     {/* ESTOQUE */}
