@@ -14,6 +14,7 @@ class UserSerializer(serializers.ModelSerializer):
             username=self.validated_data['username'],
             first_name=self.validated_data['first_name'],
             setor=self.validated_data['setor'],
+            filial=self.validated_data['filial'],
         )
         senha = self.validated_data['password']
         conta.set_password(senha)

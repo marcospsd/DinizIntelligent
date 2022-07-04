@@ -93,4 +93,4 @@ const AlterarSenha = () => {
     )
 }
 
-export default AlterarSenha;
+export default AlterarSenha;   

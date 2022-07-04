@@ -20,6 +20,7 @@ import LevantamentoEstoque from "../pages/Home/Relatorios/ESTOQUE/LevEstoque";
 //LOJAS
 import VendasPeriodoCaxu from "../pages/Home/Relatorios/LOJAS/vendasperiodocaxu";
 import MetasLais from "../pages/Home/Relatorios/RH/MetasLais";
+import DesempenhoLoja from "../pages/Home/Relatorios/LOJAS/desempenholojas"
 
 
 const AppRoutes = () => {
@@ -61,6 +62,7 @@ const AppRoutes = () => {
                     <Route exact path="/levantamentoestoque" element={<Private><LevantamentoEstoque/></Private>} />
                     {/* LOJAS */}
                     <Route exact path="/vendasperiodocaxu" element={<Private><VendasPeriodoCaxu/></Private>} />
+                    <Route exact path="/desempenholoja" element={<Private><DesempenhoLoja/></Private>} />
 
                     
                 </Routes>

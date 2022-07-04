@@ -6,7 +6,9 @@ import ResponsiveAppBar from '../../components/navbar/navbar'
 
 const HomeView = () => {
     const { user } = useContext(AuthContext)
-
+    if(!user){
+        return <p>Carregando ....</p>
+    }
     return (
         <>
         <ResponsiveAppBar/>
@@ -14,7 +16,7 @@ const HomeView = () => {
             <div className='content'>
                 <div className='superios-content'>
                 <img src={IMGIcon} />
-                <h3>Bem Vindo(a) {user} ao Diniz Intelligence</h3>
+                <h3>Bem Vindo(a) {user.first_name} ao Diniz Intelligence</h3>
                 <p>Esperamos que sua experiência em nosso portal</p>
                 <p>seja algo inexplicavelmente fantástico...</p>
                 

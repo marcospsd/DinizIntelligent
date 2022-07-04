@@ -18,16 +18,20 @@ import { AuthContext } from '../../services/auth';
 const diretoria = [
   { nome: 'Dashboard de Vendas', rota: '/dashvendasdir'},
 ]
+
 const estoque = [
   { nome: 'Levantamento Estoque', rota: '/levantamentoestoque'},
 ]
+
 const rh = [
   { nome: 'Metas Lojas', rota: '/metasrh'},
 ]
+
 const lojas = [
   { nome: 'Vendas por Periodo - CAXU', rota: '/vendasperiodocaxu'},
-
+  { nome: 'Desempenho Loja', rota: '/desempenholoja'},
 ]
+
 const financeiro = [
 
 ]
@@ -74,7 +78,8 @@ const ResponsiveAppBar = () => {
   const [anchorElUser, setAnchorElUser] = useState(null);
   const [ menuresponsive, setMenuresponsive] = useState(null);
   const [ options, setOptions ] = useState(null)
-  const acesso = localStorage.getItem('setor')
+  const acesso = user.setor
+
 
   const NewPages = () => {
     switch (acesso.toString()) {
