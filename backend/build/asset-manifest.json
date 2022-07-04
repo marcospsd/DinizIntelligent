@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.eb390193.css",
-    "main.js": "/static/js/main.81aa26b4.js",
+    "main.js": "/static/js/main.17c6df06.js",
     "static/js/787.1cc0547e.chunk.js": "/static/js/787.1cc0547e.chunk.js",
     "static/media/dinizintelligence.png": "/static/media/dinizintelligence.37a41c3392c95aa66395.png",
     "static/media/dinizintelligencebranca.png": "/static/media/dinizintelligencebranca.d12a4599068e01e4a10b.png",
     "index.html": "/index.html",
     "main.eb390193.css.map": "/static/css/main.eb390193.css.map",
-    "main.81aa26b4.js.map": "/static/js/main.81aa26b4.js.map",
+    "main.17c6df06.js.map": "/static/js/main.17c6df06.js.map",
     "787.1cc0547e.chunk.js.map": "/static/js/787.1cc0547e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eb390193.css",
-    "static/js/main.81aa26b4.js"
+    "static/js/main.17c6df06.js"
   ]
 }
