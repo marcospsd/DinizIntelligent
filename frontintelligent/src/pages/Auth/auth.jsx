@@ -1,10 +1,9 @@
-import React, {useEffect, useState, useContext} from 'react'
+import React, {useState, useContext} from 'react'
 import IMGRed from '../../assets/dinizintelligence.png'
 import "./auth.css"
 import { AuthContext } from '../../services/auth'
 
 import TextField from '@mui/material/TextField'
-import FormControl from '@mui/material/FormControl';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import InputAdornment from '@mui/material/InputAdornment';
 import AccountCircle from '@mui/icons-material/AccountCircle';
@@ -13,7 +12,7 @@ import Button from '@mui/material/Button';
 
 
 const AuthPage = () => {
-    const { authenticated, login} = useContext(AuthContext);
+    const { login} = useContext(AuthContext);
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
 

@@ -11,7 +11,6 @@ export const AuthProvicer = ({children}) => {
     const [activo, setActivo] = useState(null)
     const [user, setUser]= useState(null)
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
 
     useEffect(() => {
         const getUser = localStorage.getItem('nome');
@@ -32,9 +31,6 @@ export const AuthProvicer = ({children}) => {
     const login = async (username, password) => {
         try{
             const response = await createSession(username, password)
-            if(response.status !== 200){
-                setError('Deu erro no coisa');
-            }
             const setName = response.data.nome
             const setToken = response.data.token
             const setPK = response.data.id
@@ -45,7 +41,9 @@ export const AuthProvicer = ({children}) => {
             api.defaults.headers.Authorization = `token ${setToken}`
 
             setActivo(setName);
-            setUser(response.data)
+            api.get(`/auth/create/${response.data.id}/`)
+            .then((res) => 
+                setUser(res.data))
             
             navigate("/")
         } catch(e){
@@ -60,10 +58,13 @@ export const AuthProvicer = ({children}) => {
         api.defaults.headers.Authorization = null;
 
         setActivo(null);
+        setUser(null)
         navigate("/login")
     };
 
     return (
-        <AuthContext.Provider value={{ authenticated: !!activo, activo, loading, login, logout, user }}>{children}</AuthContext.Provider>
+        <AuthContext.Provider value={{ authenticated: !!activo, activo, loading, login, logout, user
+
+        }}>{children}</AuthContext.Provider>
     )
 }
