@@ -2,7 +2,7 @@ import axios from "axios";
 import useSWR from 'swr'
 
 export const api = axios.create({
-    baseURL: "",
+    baseURL: "https://di.dinizvitoria.com.br",
 });
 
 export const createSession = (username, password) => {

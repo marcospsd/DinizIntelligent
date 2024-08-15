@@ -33,7 +33,7 @@ const MenuView = ({setDepartamento, data, url}) => {
   };
 
   const handleOpenUserMenuBig = (event, page) => {
-    setAnchorElUser(event.currentTarget);
+    setAnchorElUser(document.body);
     if (page) {
       setOpen(page.departamento)
     }
@@ -101,7 +101,7 @@ const MenuView = ({setDepartamento, data, url}) => {
                        { data.map((page) => (
                           <Menu
                           key={page.id}
-                          sx={{ mt: '45px' }}
+                          sx={{ mt: '45px', left:'auto' }}
                           id={page.id}
                           anchorEl={anchorElUser}
                           anchorOrigin={{

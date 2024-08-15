@@ -13,9 +13,9 @@ export const AuthProvicer = ({children}) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const getUser = localStorage.getItem('nome');
-        const getToken = localStorage.getItem('token');
-        const getCodUser = localStorage.getItem('coduser')
+        const getUser = localStorage.getItem('di@nome');
+        const getToken = localStorage.getItem('di@token');
+        const getCodUser = localStorage.getItem('di@coduser')
 
         if(getUser && getToken) {
             setActivo(JSON.parse(getUser));
@@ -35,9 +35,9 @@ export const AuthProvicer = ({children}) => {
             const setToken = response.data.token
             const setPK = response.data.id
             
-            localStorage.setItem("nome", JSON.stringify(setName));
-            localStorage.setItem("token", setToken);
-            localStorage.setItem('coduser', setPK);
+            localStorage.setItem("di@nome", JSON.stringify(setName));
+            localStorage.setItem("di@token", setToken);
+            localStorage.setItem('di@coduser', setPK);
             api.defaults.headers.Authorization = `token ${setToken}`
 
             setActivo(setName);
@@ -52,9 +52,9 @@ export const AuthProvicer = ({children}) => {
     };
     
     const logout = () => {
-        localStorage.removeItem("nome")
-        localStorage.removeItem("token")
-        localStorage.removeItem('coduser')
+        localStorage.removeItem("di@nome")
+        localStorage.removeItem("di@token")
+        localStorage.removeItem('di@coduser')
         api.defaults.headers.Authorization = null;
 
         setActivo(null);

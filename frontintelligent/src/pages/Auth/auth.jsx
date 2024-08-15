@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 
 
 const AuthPage = () => {
-    const { login} = useContext(AuthContext);
+    const { login } = useContext(AuthContext);
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
 
