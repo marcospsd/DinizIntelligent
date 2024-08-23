@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,8 +25,9 @@ SECRET_KEY = 'django-insecure-9v+@=0@-4$jmw0@i05w-tcz-w0lp-9y+sme_b72qcfwe@ik0v7
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*']
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Application definition
@@ -88,11 +90,11 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dinizintelligence',
-        'USER': 'root',
-        'PASSWORD': 'T1$3nh4',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config("DB_PASS"),
         'PORT': '3306',
-        'HOST': '10.3.1.5',
+        'HOST': config("DB_HOST"),
     }
 }
 
