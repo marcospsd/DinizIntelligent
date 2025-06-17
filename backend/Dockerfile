@@ -17,7 +17,7 @@ RUN pip install -r requeriments.txt
 RUN pip install gunicorn
 #EXPONDO A PORTA 
 
-EXPOSE 200
+EXPOSE 2000
 ## ATIVANDO O SERVICE
 
 ENTRYPOINT gunicorn -w 2 --bind 0.0.0.0:2000 dinizintelligent.wsgi
